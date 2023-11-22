@@ -1,0 +1,17 @@
+.navbar {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #1F3B4D;
+}
+
+.greetings {
+  flex: 1;
+  padding: 1.5rem;
+  width: 90%;
+}
+
+.progress {
+  flex: 2;
+}
