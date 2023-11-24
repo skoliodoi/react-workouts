@@ -1,22 +1,18 @@
 import styles from "./WorkoutPage.module.css";
-import { videoData } from "../assets/links";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebarComponents/Sidebar";
 import WorkoutScreen from "../components/WorkoutScreen";
-import ListOfDays from "../components/ListOfDays";
+import { WorkoutProvider } from "../contexts/WorkoutContext";
 
-const codes = videoData;
 function WorkoutPage() {
   return (
-    <>
+    <WorkoutProvider>
       <Navbar />
       <div className={styles.container}>
-        <Sidebar>
-          <ListOfDays codes={codes} />
-        </Sidebar>
+        <Sidebar />
         <WorkoutScreen />
       </div>
-    </>
+    </WorkoutProvider>
   );
 }
 
